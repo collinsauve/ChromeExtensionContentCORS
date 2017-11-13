@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "ChromeExtensionContentCORS",
+    "short_name": "ChromeExtensionContentCORS",
+    "author": "https://github.com/collinsauve",
+    "description": "Testing how CORS behaves in Chrome Extension content scripts",
+    "version": "0.0",
+    "permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "*://*/*" ],
+            "js": [ "content.js" ]            
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "externally_connectable": {
+        "ids": [],
+        "matches": []
+    }
+}

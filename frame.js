@@ -4,10 +4,10 @@ const options = {
 };
 fetch(url, options)
     .then(r => {
-        console.log("Content GET", r, Array.from(r.headers));
+        console.log("Frame GET", r, Array.from(r.headers));
     });
 
 fetch(url, { method: "POST", ...options })
     .then(r => {
-        console.log("Content POST", r, Array.from(r.headers));
+        console.log("Frame POST", r, Array.from(r.headers));
     });
